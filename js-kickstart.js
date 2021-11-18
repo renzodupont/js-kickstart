@@ -5,6 +5,37 @@
  */
 
 /**
+ * Returns an Object with the number of instances of each word in a given text.
+ * Sample return: { "hello" : 2, "world" : 1 }
+ * @param {string} val
+ * @returns {object}
+ */
+export const wordCount = (val) => {
+  let charCounter = 0;
+  let wordArray = val
+    .replace(
+      /[\.’'\[\](){}⟨⟩:,،、‒–—―…!.‹›«»‐\-?‘’“”'";/⁄·\&*@\•^†‡°”¡¿※#№÷×ºª%‰+−=‱¶′″‴§~_|‖¦©℗®℠™¤₳฿₵¢₡₢$₫₯֏₠€ƒ₣₲₴₭₺₾ℳ₥₦₧₱₰£៛₽₹₨₪৳₸₮₩¥]/g,
+      ""
+    )
+    .split(" ");
+
+  wordArray = wordArray
+    .filter((item) => item.trim() !== "") // Filter empty keys
+    .map((item) => {
+      charCounter += item.trim().length;
+      return item.trim();
+    }); //Trims spaces from all words
+
+  const wordSet = new Set(wordArray);
+
+  wordArray.map((item) => {
+    wordSet[item] = wordSet[item] ? wordSet[item] + 1 : 1;
+  });
+
+  return { ...wordSet };
+};
+
+/**
  * Gets the value of a paramater present in the URL of the page. If not present, returns null.
  * This function only works in Front End JS platforms.
  * @param {string} paramName

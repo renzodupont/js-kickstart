@@ -6,8 +6,7 @@ Javascript Library with several utils methods which can be used in any type of p
 
 <dl>
 <dt><a href="#wordCount">wordCount</a> ⇒ <code>object</code></dt>
-<dd><p>Returns an Object with the number of instances of each word in a given text.
-Sample return: { &quot;hello&quot; : 2, &quot;world&quot; : 1 }</p>
+<dd><p>Returns an Object with the number of instances of each word in a given text. Sample return: { &quot;hello&quot; : 2, &quot;world&quot; : 1 }</p>
 </dd>
 <dt><a href="#getUrlParameter">getUrlParameter</a> ⇒ <code>string</code> | <code>null</code></dt>
 <dd><p>Gets the value of a paramater present in the URL of the page. If not present, returns null.
@@ -32,7 +31,7 @@ This function only works in Front End JS platforms.</p>
 
 ## wordCount ⇒ <code>object</code>
 
-Sample return: { "hello" : 2, "world" : 1 }ces of each word in a given text.
+Returns an Object with the number of instances of each word in a given text. Sample return: { "hello" : 2, "world" : 1 }
 
 **Kind**: global constant
 

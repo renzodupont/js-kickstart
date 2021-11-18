@@ -5,8 +5,7 @@
  */
 
 /**
- * Returns an Object with the number of instances of each word in a given text.
- * Sample return: { "hello" : 2, "world" : 1 }
+ * Returns an Object with the number of instances of each word in a given text. Sample return: { "hello" : 2, "world" : 1 }
  * @param {string} val
  * @returns {object}
  */
